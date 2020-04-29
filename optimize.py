@@ -47,10 +47,8 @@ def DownSampling(img):
 
     # downSampledImg1 = cv2.blur(enhancedImg,(3,3))
 
-
-    # downSampledImg1 = cv2.threshold(enhancedImg,127,255,cv2.THRESH_BINARY)
-    downSampledImg = enhancedImg[::5,::5]
-    downSampledImg = downSampledImg[::3,::3]
+    # By changing 3 , 3 into 5,5 speed can be increased
+    downSampledImg = enhancedImg[::3,::3]
     
     vector = downSampledImg.reshape(1,downSampledImg.size)
 
